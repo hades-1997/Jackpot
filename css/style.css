@@ -1,0 +1,847 @@
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/bg-2021.jpg'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1,
+.info {
+    color: #fff;
+    margin: 1em 0;
+    text-align: center;
+}
+
+.info {
+    font-size: 120%
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.info {
+    clear: both
+}
+
+body {
+    color: white;
+    font-family: 'Lucida Grande', Verdana, Arial;
+    font-size: 12px;
+}
+
+.container {
+    -webkit-perspective: 800;
+    -webkit-perspective-origin: 50% 225px;
+    -moz-perspective: 800px;
+    -moz-perspective-origin: 50% 225px;
+    perspective: 800px;
+    perspective-origin: 50% 225px;
+    margin: auto;
+    padding: 110px 0 0;
+    position: absolute;
+    top: 104px;
+    left: 100px;
+    z-index: 99;
+}
+
+.wrap,
+form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0
+}
+
+.stage {
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: -webkit-transform 2s;
+    -moz-transform-style: preserve-3d;
+    transition: -webkit-transform 2s;
+    transform-style: preserve-3d;
+    float: left;
+}
+
+.wheel {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    float: right;
+    margin: 0 0 0 10px;
+}
+
+.wheel li {
+    position: absolute;
+    height: 56px;
+    width: 56px;
+    line-height: 56px;
+    -webkit-border-radius: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-border-radius: 12px;
+    -moz-box-sizing: border-box;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Times, serif;
+    font-size: 24pt;
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    -webkit-transition: -webkit-transform 2s, opacity 2s;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: -webkit-transform 2s, opacity 2s;
+    -moz-backface-visibility: hidden;
+    transition: -webkit-transform 2s, opacity 2s;
+    backface-visibility: hidden;
+}
+
+/* variations
+@-webkit-keyframes spin0  {
+    from {
+        -webkit-transform: rotateX(0);
+    }
+
+    to {
+        -webkit-transform: rotateX(360deg);
+    }
+}
+
+@-moz-keyframes spin0 {
+    from {
+        -moz-transform: rotateX(0);
+    }
+
+    to {
+        -moz-transform: rotateX(360deg);
+    }
+}
+
+@keyframes spin0 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
+}
+ */
+
+
+@keyframes spin0 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX( 360deg );
+    }
+}
+
+@keyframes spin1 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(36deg + 360deg ));
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(70deg + 360deg ));
+    }
+}
+
+@keyframes spin3 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(105deg + 360deg ));
+    }
+}
+
+@keyframes spin4 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(141deg + 360deg ));
+    }
+}
+
+@keyframes spin5 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(176deg + 360deg ));
+    }
+}
+
+@keyframes spin6 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(213deg + 360deg ));
+    }
+}
+
+@keyframes spin7 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(249deg + 360deg ));
+    }
+}
+
+@keyframes spin8 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(287deg + 360deg ));
+    }
+}
+
+@keyframes spin9 {
+    from {
+        transform: rotateX(0);
+    }
+
+    to {
+        transform: rotateX(calc(324deg + 360deg));
+    }
+}
+
+/* ---------- wheel styles ------------- */
+.wheel .one {
+    -webkit-transform: translateZ(90px);
+}
+
+.wheel .two {
+    -webkit-transform: rotateX(-36deg) translateZ(90px);
+}
+
+.wheel .three {
+    -webkit-transform: rotateX(-72deg) translateZ(90px);
+}
+
+.wheel .four {
+    -webkit-transform: rotateX(-108deg) translateZ(90px);
+}
+
+.wheel .five {
+    -webkit-transform: rotateX(-144deg) translateZ(90px);
+}
+
+.wheel .six {
+    -webkit-transform: rotateX(-180deg) translateZ(90px);
+}
+
+.wheel .seven {
+    -webkit-transform: rotateX(-216deg) translateZ(90px);
+}
+
+.wheel .eight {
+    -webkit-transform: rotateX(-252deg) translateZ(90px);
+}
+
+.wheel .nine {
+    -webkit-transform: rotateX(-288deg) translateZ(90px);
+}
+
+.wheel .ten {
+    -webkit-transform: rotateX(-324deg) translateZ(90px);
+}
+
+/* mozilla */
+/* ---------- wheel styles ------------- */
+.wheel .one {
+    -moz-transform: translateZ(90px);
+}
+
+.wheel .two {
+    -moz-transform: rotateX(-36deg) translateZ(90px);
+}
+
+.wheel .three {
+    -moz-transform: rotateX(-72deg) translateZ(90px);
+}
+
+.wheel .four {
+    -moz-transform: rotateX(-108deg) translateZ(90px);
+}
+
+.wheel .five {
+    -moz-transform: rotateX(-144deg) translateZ(90px);
+}
+
+.wheel .six {
+    -moz-transform: rotateX(-180deg) translateZ(90px);
+}
+
+.wheel .seven {
+    -moz-transform: rotateX(-216deg) translateZ(90px);
+}
+
+.wheel .eight {
+    -moz-transform: rotateX(-252deg) translateZ(90px);
+}
+
+.wheel .nine {
+    -moz-transform: rotateX(-288deg) translateZ(90px);
+}
+
+.wheel .ten {
+    -moz-transform: rotateX(-324deg) translateZ(90px);
+}
+
+/* standard */
+/* ---------- wheel styles ------------- */
+.wheel .one {
+    transform: translateZ(90px);
+}
+
+.wheel .two {
+    transform: rotateX(-36deg) translateZ(90px);
+}
+
+.wheel .three {
+    transform: rotateX(-72deg) translateZ(90px);
+}
+
+.wheel .four {
+    transform: rotateX(-108deg) translateZ(90px);
+}
+
+.wheel .five {
+    transform: rotateX(-144deg) translateZ(90px);
+}
+
+.wheel .six {
+    transform: rotateX(-180deg) translateZ(90px);
+}
+
+.wheel .seven {
+    transform: rotateX(-216deg) translateZ(90px);
+}
+
+.wheel .eight {
+    transform: rotateX(-252deg) translateZ(90px);
+}
+
+.wheel .nine {
+    transform: rotateX(-288deg) translateZ(90px);
+}
+
+.wheel .ten {
+    transform: rotateX(-324deg) translateZ(90px);
+}
+
+
+
+/* colours */
+.mystery {
+    color: yellow;
+}
+
+.stage li {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    font-weight: bold
+}
+
+li.red {
+    color: #f00
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    bottom: -75px;
+    left: -41px;
+    right: -59px;
+    top: 30px;
+    z-index: 999;
+    border: 40px solid rgba(255, 160, 0, 0.8);
+    border-top: 63px solid rgba(255, 143, 0, 0.8);
+    border-bottom: 74px solid rgba(255, 60, 0, 0.8);
+    pointer-events: none;
+    border-radius: 12px;
+    box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.4)
+}
+
+
+/* inputs */
+.wrap input {
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.wrap input[type=checkbox] {
+    left: -999em
+}
+
+.wrap label {
+    background: transparent;
+    color: #000;
+    position: absolute;
+    top: 27px;
+    left: 432px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    cursor: pointer
+}
+
+.wrap .reset {
+    z-index: 1;
+    top: 27px;
+    left: 432px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer
+}
+
+input:checked+label {
+    z-index: -1;
+}
+
+.reset label {
+    z-index: 2;
+    border-radius: 10px;
+    padding: 19px 30px;
+    position: relative;
+    background-image: -webkit-radial-gradient(30% 40%, rgb(255 15 15), rgb(255 15 15));
+    background-image: -moz-radial-gradient(30% 40%, rgb(255 15 15), rgb(255 15 15));
+    background-image: -ms-radial-gradient(30% 40%, rgb(255 15 15), rgb(255 15 15));
+    background-image: -o-radial-gradient(30% 40%, rgb(255 15 15), rgb(255 15 15));
+    background-image: radial-gradient(circle at 30% 40%, rgb(255 15 15), rgb(255 15 15));
+    top: 21px;
+    margin-left: 13px;
+    left: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*giao diện người dùng */
+.machine {
+    position: absolute;
+    padding: 0;
+    width: 421px;
+    height: 421px;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.lever {
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+}
+
+.ball {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    background-image: -webkit-radial-gradient(30% 40%, rgb(255 223 34), rgb(255 15 15));
+    background-image: -moz-radial-gradient(30% 40%, rgb(255 223 34), rgb(255 15 15));
+    background-image: -ms-radial-gradient(30% 40%, rgb(255 223 34), rgb(255 15 15));
+    background-image: -o-radial-gradient(30% 40%, rgb(255 223 34), rgb(255 15 15));
+    background-image: radial-gradient(circle at 30% 40%, rgb(255 223 34), rgb(255 15 15));
+    z-index: 0;
+    top: 2px;
+    margin-left: 13px;
+}
+/* main*/
+.main {
+    width: 417px;
+    border: 1px solid #3f3f3f;
+    padding: 10px;
+    background: #666;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: -2px 0 0 -18px;
+}
+
+.main-inner {
+    border-radius: 4px;
+    height: 232px;
+    border: 1px solid #4f4f4f;
+    background: rgb(40, 40, 40);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(40, 40, 40, 1) 0%, rgba(130, 130, 130, 1) 39%, rgba(130, 130, 130, 1) 57%, rgba(40, 40, 40, 1) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40, 40, 40, 1)), color-stop(39%, rgba(130, 130, 130, 1)), color-stop(57%, rgba(130, 130, 130, 1)), color-stop(100%, rgba(40, 40, 40, 1)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(40, 40, 40, 1) 0%, rgba(130, 130, 130, 1) 39%, rgba(130, 130, 130, 1) 57%, rgba(40, 40, 40, 1) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(40, 40, 40, 1) 0%, rgba(130, 130, 130, 1) 39%, rgba(130, 130, 130, 1) 57%, rgba(40, 40, 40, 1) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(40, 40, 40, 1) 0%, rgba(130, 130, 130, 1) 39%, rgba(130, 130, 130, 1) 57%, rgba(40, 40, 40, 1) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(40, 40, 40, 1) 0%, rgba(130, 130, 130, 1) 39%, rgba(130, 130, 130, 1) 57%, rgba(40, 40, 40, 1) 100%);
+    /* W3C */
+}
+
+.effect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 478px;
+    height: 500px;
+    z-index: -1;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+
+
+
+.tens1 {
+    -webkit-animation-name: spin1;
+    -moz-animation-name: spin1;
+    animation-name: spin1;
+}
+.tens2 {
+    -webkit-animation-name: spin2;
+    -moz-animation-name: spin2;
+    animation-name: spin2;
+}
+.tens3 {
+    -webkit-animation-name: spin3;
+    -moz-animation-name: spin3;
+    animation-name: spin3;
+}
+.tens4 {
+    -webkit-animation-name: spin4;
+    -moz-animation-name: spin4;
+    animation-name: spin4;
+}
+.tens5 {
+    -webkit-animation-name: spin5;
+    -moz-animation-name: spin5;
+    animation-name: spin5;
+}
+.tens6 {
+    -webkit-animation-name: spin6;
+    -moz-animation-name: spin6;
+    animation-name: spin6;
+}
+.tens7 {
+    -webkit-animation-name: spin7;
+    -moz-animation-name: spin7;
+    animation-name: spin7;
+}
+.tens8 {
+    -webkit-animation-name: spin8;
+    -moz-animation-name: spin8;
+    animation-name: spin8;
+}
+.tens9 {
+    -webkit-animation-name: spin9;
+    -moz-animation-name: spin9;
+    animation-name: spin9;
+}
+.tens0 {
+    -webkit-animation-name: spin0;
+    -moz-animation-name: spin0;
+    animation-name: spin0;
+}
+.units1 {
+    -webkit-animation-name: spin1;
+    -moz-animation-name: spin1;
+    animation-name: spin1;
+}
+.units2 {
+    -webkit-animation-name: spin2;
+    -moz-animation-name: spin2;
+    animation-name: spin2;
+}
+.units3 {
+    -webkit-animation-name: spin3;
+    -moz-animation-name: spin3;
+    animation-name: spin3;
+}
+.units4 {
+    -webkit-animation-name: spin4;
+    -moz-animation-name: spin4;
+    animation-name: spin4;
+}
+.units5 {
+    -webkit-animation-name: spin5;
+    -moz-animation-name: spin5;
+    animation-name: spin5;
+}
+.units6 {
+    -webkit-animation-name: spin6;
+    -moz-animation-name: spin6;
+    animation-name: spin6;
+}
+.units7 {
+    -webkit-animation-name: spin7;
+    -moz-animation-name: spin7;
+    animation-name: spin7;
+}
+.units8 {
+    -webkit-animation-name: spin8;
+    -moz-animation-name: spin8;
+    animation-name: spin8;
+}
+.units9 {
+    -webkit-animation-name: spin9;
+    -moz-animation-name: spin9;
+    animation-name: spin9;
+}
+.units0 {
+    -webkit-animation-name: spin0;
+    -moz-animation-name: spin0;
+    animation-name: spin0;
+}
+.hundreds1 {
+    -webkit-animation-name: spin1;
+    -moz-animation-name: spin1;
+    animation-name: spin1;
+}
+.hundreds2 {
+    -webkit-animation-name: spin2;
+    -moz-animation-name: spin2;
+    animation-name: spin2;
+}
+.hundreds3 {
+    -webkit-animation-name: spin3;
+    -moz-animation-name: spin3;
+    animation-name: spin3;
+}
+.hundreds4 {
+    -webkit-animation-name: spin4;
+    -moz-animation-name: spin4;
+    animation-name: spin4;
+}
+.hundreds5 {
+    -webkit-animation-name: spin5;
+    -moz-animation-name: spin5;
+    animation-name: spin5;
+}
+.hundreds6 {
+    -webkit-animation-name: spin6;
+    -moz-animation-name: spin6;
+    animation-name: spin6;
+}
+.hundreds7 {
+    -webkit-animation-name: spin7;
+    -moz-animation-name: spin7;
+    animation-name: spin7;
+}
+.hundreds8 {
+    -webkit-animation-name: spin8;
+    -moz-animation-name: spin8;
+    animation-name: spin8;
+}
+.hundreds9 {
+    -webkit-animation-name: spin9;
+    -moz-animation-name: spin9;
+    animation-name: spin9;
+}
+.hundreds0 {
+    -webkit-animation-name: spin0;
+    -moz-animation-name: spin0;
+    animation-name: spin0;
+}
+
+.img-conrong {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.img-conrong img {
+    width: 35%;
+}
+
+.nutcaidat {
+    background-image: url(../img/caidat.png);
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    z-index: 999;
+    align-items: center;
+}
+
+#popup,
+#popuptien {
+    position: absolute;
+    width: 250px;
+    height: 375px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    z-index: 9999;
+}
+
+.nenpopup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+}
+
+.buttontatpopup,
+.buttonlammoi,
+.lichsulixi,
+.sotiendalixi,
+.sotienpopupnhantien,
+.lammoipopupnhantien {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10000;
+}
+
+.buttontatpopup {
+    width: 93px;
+    height: 32px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(3%) translateY(330%);
+    cursor: pointer;
+}
+
+.buttonlammoi {
+    width: 93px;
+    height: 32px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-103%) translateY(330%);
+    cursor: pointer;
+}
+
+.lichsulixi {
+    width: 162px;
+    height: 79px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(12%);
+    overflow: auto;
+    font-size: 15px;
+    color: #f2f4be;
+    text-shadow: 2px 2px 5px #f7ff29;
+}
+
+.sotiendalixi {
+    width: 141px;
+    height: 31px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-190%);
+    text-shadow: 2px 2px 5px #f7ff29;
+    color: #f2f4be;
+    font-size: 20px;
+    text-align: center;
+}
+
+#caidat,
+#popupnhantien {
+    display: none;
+}
+
+.nutquay {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.sotienpopupnhantien {
+    width: 162px;
+    height: 79px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(12%);
+    font-size: 15px;
+    color: #f2f4be;
+    text-shadow: 2px 2px 5px #f7ff29;
+    text-align: center;
+}
+
+.lammoipopupnhantien {
+    width: 135px;
+    height: 32px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(330%);
+    cursor: pointer;
+}
+
+.success span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.success {
+    background-color: transparent;
+    margin: 100px 200px 0;
+    display: block;
+    text-align: center;
+}
+
+#thongbao {
+    display: none;
+}
+
+.thongbao__qua {
+    background-color: #00000069;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+strong#sotrungthuong {
+    color: #ffe900;
+    font-size: 2rem;
+}
+
+#animation_firework {
+    display: none;
+}

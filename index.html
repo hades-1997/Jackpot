@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jackpot</title>
+        <style>
+                /* set timing for each wheel */
+                .units {
+                animation: 6s linear 2 forwards;
+                }
+
+                .tens {
+                animation: 4s linear 2 forwards;
+                }
+
+                .hundreds {
+                animation: 3.5s linear 2 forwards;
+                }
+        </style>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/phaohoa.css">
+</head>
+
+<body class="jackpot">
+        <div class="success" id="thongbao">
+               <div class="thongbao__qua"> 
+                <span>Chúc mừng mã số <strong class="maso" id="sotrungthuong"> </strong> đã trúng thưởng phần quà năm mới tại LONGYI</span>
+                <div class="pyro" id="animation_firework"><div class="before"></div><div class="after"></div></div>
+                </div>
+        </div>
+        <div class="machine">
+                <form name="form1" method="post" action="">
+                        <div class="wrap">
+                                <div class="container">
+                                        <div class="stage">
+                                                <ol class="wheel units" id="units">
+                                                        <li class="one">0</li>
+                                                        <li class="two red">1</li>
+                                                        <li class="three red">2</li>
+                                                        <li class="four">3</li>
+                                                        <li class="five red">4</li>
+                                                        <li class="six">5</li>
+                                                        <li class="seven red">6</li>
+                                                        <li class="eight mystery">7</li>
+                                                        <li class="nine">8</li>
+                                                        <li class="ten red">9</li>
+                                                </ol>
+                                                <ol class="wheel tens" id="tens">
+                                                        <li class="one">0</li>
+                                                        <li class="two red">1</li>
+                                                        <li class="three red">2</li>
+                                                        <li class="four">3</li>
+                                                        <li class="five red">4</li>
+                                                        <li class="six">5</li>
+                                                        <li class="seven red">6</li>
+                                                        <li class="eight mystery">7</li>
+                                                        <li class="nine">8</li>
+                                                        <li class="ten red">9</li>
+                                                </ol>
+                                                <ol class="wheel hundreds" id="hundreds">
+                                                        <li class="one">0</li>
+                                                        <li class="two red">1</li>
+                                                        <li class="three red">2</li>
+                                                        <li class="four">3</li>
+                                                        <li class="five red">4</li>
+                                                        <li class="six">5</li>
+                                                        <li class="seven red">6</li>
+                                                        <li class="eight mystery">7</li>
+                                                        <li class="nine">8</li>
+                                                        <li class="ten red">9</li>
+                                                </ol>
+                                        </div>
+                                </div>
+                                <div class="lever">
+                                        <div class="pull" onclick="chay(600)" style="cursor: pointer;">
+                                                <div class="ball">Quay Số</div>
+                                        </div>
+                                        <div class="reset" onclick="reset()">
+                                        <label for="reset" >reset</label>
+                                        </div>
+                                </div>
+                        </div>
+                </form>
+        </div>
+        <div id="caidat">
+                <img id="popup" src="img/popup.jpg">
+                <div class="sotiendalixi" id="sotiendalixi"></div>
+                <div class="lichsulixi" id="lichsulixi"></div>
+                <div class="buttontatpopup" onclick="tatpopup()"></div>
+                <div class="buttonlammoi" id="lammoi" onclick="lammoi()"></div>
+                <div class="nenpopup"></div>
+        </div>
+        <div class="img-conrong">
+                <img src="./img/conrongchuctet.png" alt="" srcset="">
+        </div>
+        <div class="nutcaidat" style="position:fixed;bottom:0px;left:20px" onclick="mopopup()"></div>
+        <audio id="votay"><source src="sound/votay.mp3" type="audio/mpeg"></audio>
+        <audio id="matluot"><source src="sound/matluot.mp3" type="audio/mpeg"></audio>
+        <audio id="dangquay"><source src="sound/dangquay.mp3" type="audio/mpeg"></audio>
+        <audio id="vongquay"><source src="sound/vong-quay-may-man.mp3" type="audio/mpeg"></audio>
+<!-- end machine -->
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
